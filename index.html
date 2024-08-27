@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="global.css" />
+
+    <title>quicklist</title>
+  </head>
+  <body>
+    <header class="container">
+      <img src="./img/logo.svg" alt="logo da quicklist" id="logo" />
+    </header>
+    <main class="container">
+      <a href="#"><- Voltar </a>
+
+      <div id="form-list">
+        <h1>Compras da semana</h1>
+
+        <form id="form-addItem">
+          <input type="text" placeholder="Adicione um novo item" required id="inputItem"/>
+          <button type="submit" id="addButton">Adicionar item</button>
+        </form>
+
+        <ul>
+          <li>
+            <input type="checkbox" id="item1" />
+            <label for="item1">Pão de forma</label>
+            <button class="remove-item"></button>
+          </li>
+          <li>
+            <input type="checkbox" id="item2" />
+            <label for="item2">Café preto</label>
+            <button class="remove-item"></button>
+          </li>
+          <li>
+            <input type="checkbox" id="item3" />
+            <label for="item3">Suco de laranja</label>
+            <button class="remove-item"></button>
+          </li>
+          <li>
+            <input type="checkbox" id="item4" />
+            <label for="item4">Bolacha</label>
+            <button class="remove-item"></button>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <div class="container alert fade-out hidden" id="alert-message">
+      <img src="./img/warning-circle-filled.svg" alt="ícone de aviso">
+      <span>O item foi removido da lista</span>
+      <img src="./img/delete.svg" alt="ícone de X para ignorar o aviso" id="close-alert-message">
+    </div>
+
+    <script src="./scripts.js"></script>
+  </body>
+</html>
